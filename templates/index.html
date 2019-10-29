@@ -1,0 +1,254 @@
+<!doctype html>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+<!-- TODO download this locally so I can use it offline -->
+<script src="jquery.min.js"></script>
+<script src="catan.js"></script>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Catan Board</title>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+    </head>
+    <body onload="inputGameInfo()">
+        <!-- Stats Card -->
+        <!-- <div id="statsBox" data-text="" class="statsCard"></div> -->
+        <table>
+            <tr>
+                <th colspan="3">Players</th>
+            </tr>
+            <tr>
+                <th>Player</th>
+                <th>Colour</th>
+                <td>Points</td>
+            </tr>
+            <tr>
+                <th>1</th>
+                <th>Blue</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <th>Red</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <th>Green</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <th>Orange</th>
+                <td></td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <th colspan="2">Vertex Stats</th>
+            </tr>
+            <tr>
+                <th>Primary Score</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Secondary Score</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Total Score</th>
+                <td>jhghjgkhk</td>
+            </tr>
+        </table>
+        <!-- TILES -->
+            <!-- TOP ROW -->
+            <div onclick="inputTileInfo(this,0)" data-text="" class="tile"></div>
+            <div onclick="inputTileInfo(this,1)" data-text="" class="tile" style="left:400px;top:150px;"></div>
+            <div onclick="inputTileInfo(this,2)" data-text="" class="tile" style="left:500px;top:100px;"></div>
+            <!-- SECOND ROW -->
+            <div onclick="inputTileInfo(this,3)" data-text="" class="tile" style="left:250px;top:140px;"></div>
+            <div onclick="inputTileInfo(this,4)" data-text="" class="tile" style="left:350px;top:90px;"></div>
+            <div onclick="inputTileInfo(this,5)" data-text="" class="tile" style="left:450px;top:40px;"></div>
+            <div onclick="inputTileInfo(this,6)" data-text="" class="tile" style="left:550px;top:-10px;"></div>
+            <!-- THIRD ROW -->
+            <div onclick="inputTileInfo(this,7)" data-text="" class="tile" style="left:200px;top:30px;"></div>
+            <div onclick="inputTileInfo(this,8)" data-text="" class="tile" style="left:300px;top:-20px;"></div>
+            <div onclick="inputTileInfo(this,9)" data-text="" class="tile" style="left:400px;top:-70px;"></div>
+            <div onclick="inputTileInfo(this,10)" data-text="" class="tile" style="left:500px;top:-120px;"></div>
+            <div onclick="inputTileInfo(this,11)" data-text="" class="tile" style="left:600px;top:-170px;"></div>
+            <!-- FOURTH ROW -->
+            <div onclick="inputTileInfo(this,12)" data-text="" class="tile" style="left:250px;top:-130px;"></div>
+            <div onclick="inputTileInfo(this,13)" data-text="" class="tile" style="left:350px;top:-180px;"></div>
+            <div onclick="inputTileInfo(this,14)" data-text="" class="tile" style="left:450px;top:-230px;"></div>
+            <div onclick="inputTileInfo(this,15)" data-text="" class="tile" style="left:550px;top:-280px;"></div>
+            <!-- FIFTH ROW -->
+            <div onclick="inputTileInfo(this,16)" data-text="" class="tile" style="left:300px;top:-240px;"></div>
+            <div onclick="inputTileInfo(this,17)" data-text="" class="tile" style="left:400px;top:-290px;"></div>
+            <div onclick="inputTileInfo(this,18)" data-text="" class="tile" style="left:500px;top:-340px;"></div>
+        <!-- ROADS -->
+            <!-- Vertical roads -->
+            <div onclick="inputRoadInfo(this,0)" class="vertRoad"></div>
+            <div onclick="inputRoadInfo(this,1)" class="vertRoad" style="left:391px;top:-785px;"></div>
+            <div onclick="inputRoadInfo(this,2)" class="vertRoad" style="left:491px;top:-825px;"></div>
+            <div onclick="inputRoadInfo(this,3)" class="vertRoad" style="left:591px;top:-865px;"></div>
+
+            <div onclick="inputRoadInfo(this,4)" class="vertRoad" style="left:241px;top:-815px;"></div>
+            <div onclick="inputRoadInfo(this,5)" class="vertRoad" style="left:341px;top:-855px;"></div>
+            <div onclick="inputRoadInfo(this,6)" class="vertRoad" style="left:441px;top:-895px;"></div>
+            <div onclick="inputRoadInfo(this,7)" class="vertRoad" style="left:541px;top:-935px;"></div>
+            <div onclick="inputRoadInfo(this,8)" class="vertRoad" style="left:641px;top:-975px;"></div>
+
+            <div onclick="inputRoadInfo(this,9)" class="vertRoad" style="left:191px;top:-925px;"></div>
+            <div onclick="inputRoadInfo(this,10)" class="vertRoad" style="left:291px;top:-965px;"></div>
+            <div onclick="inputRoadInfo(this,11)" class="vertRoad" style="left:391px;top:-1005px;"></div>
+            <div onclick="inputRoadInfo(this,12)" class="vertRoad" style="left:491px;top:-1045px;"></div>
+            <div onclick="inputRoadInfo(this,13)" class="vertRoad" style="left:591px;top:-1085px;"></div>
+            <div onclick="inputRoadInfo(this,14)" class="vertRoad" style="left:691px;top:-1125px;"></div>
+            
+            <div onclick="inputRoadInfo(this,15)" class="vertRoad" style="left:241px;top:-1075px;"></div>
+            <div onclick="inputRoadInfo(this,16)" class="vertRoad" style="left:341px;top:-1115px;"></div>
+            <div onclick="inputRoadInfo(this,17)" class="vertRoad" style="left:441px;top:-1155px;"></div>
+            <div onclick="inputRoadInfo(this,18)" class="vertRoad" style="left:541px;top:-1195px;"></div>
+            <div onclick="inputRoadInfo(this,19)" class="vertRoad" style="left:641px;top:-1235px;"></div>
+
+            <div onclick="inputRoadInfo(this,20)" class="vertRoad" style="left:291px;top:-1185px;"></div>
+            <div onclick="inputRoadInfo(this,21)" class="vertRoad" style="left:391px;top:-1225px;"></div>
+            <div onclick="inputRoadInfo(this,22)" class="vertRoad" style="left:491px;top:-1265px;"></div>
+            <div onclick="inputRoadInfo(this,23)" class="vertRoad" style="left:591px;top:-1305px;"></div>
+
+            <!-- - 60 degree roads -->
+            <div onclick="inputRoadInfo(this,24)" class="rightRoad" style="left:366px;top:-1748px;"></div>
+            <div onclick="inputRoadInfo(this,25)" class="rightRoad" style="left:466px;top:-1788px;"></div>
+            <div onclick="inputRoadInfo(this,26)" class="rightRoad" style="left:566px;top:-1828px;"></div>
+
+            <div onclick="inputRoadInfo(this,27)" class="rightRoad" style="left:316px;top:-1779px;"></div>
+            <div onclick="inputRoadInfo(this,28)" class="rightRoad" style="left:416px;top:-1819px;"></div>
+            <div onclick="inputRoadInfo(this,29)" class="rightRoad" style="left:516px;top:-1859px;"></div>
+            <div onclick="inputRoadInfo(this,30)" class="rightRoad" style="left:616px;top:-1899px;"></div>
+            
+            <div onclick="inputRoadInfo(this,31)" class="rightRoad" style="left:266px;top:-1849px;"></div>
+            <div onclick="inputRoadInfo(this,32)" class="rightRoad" style="left:366px;top:-1889px;"></div>
+            <div onclick="inputRoadInfo(this,33)" class="rightRoad" style="left:466px;top:-1929px;"></div>
+            <div onclick="inputRoadInfo(this,34)" class="rightRoad" style="left:566px;top:-1969px;"></div>
+            <div onclick="inputRoadInfo(this,35)" class="rightRoad" style="left:666px;top:-2009px;"></div>
+
+            <div onclick="inputRoadInfo(this,36)" class="rightRoad" style="left:316px;top:-1959px;"></div>
+            <div onclick="inputRoadInfo(this,37)" class="rightRoad" style="left:416px;top:-1999px;"></div>
+            <div onclick="inputRoadInfo(this,38)" class="rightRoad" style="left:516px;top:-2039px;"></div>
+            <div onclick="inputRoadInfo(this,39)" class="rightRoad" style="left:616px;top:-2079px;"></div>
+
+            <div onclick="inputRoadInfo(this,40)" class="rightRoad" style="left:266px;top:-2029px;"></div>
+            <div onclick="inputRoadInfo(this,41)" class="rightRoad" style="left:366px;top:-2069px;"></div>
+            <div onclick="inputRoadInfo(this,42)" class="rightRoad" style="left:466px;top:-2109px;"></div>
+            <div onclick="inputRoadInfo(this,43)" class="rightRoad" style="left:566px;top:-2149px;"></div>
+
+            <div onclick="inputRoadInfo(this,44)" class="rightRoad" style="left:316px;top:-2099px;"></div>
+            <div onclick="inputRoadInfo(this,45)" class="rightRoad" style="left:416px;top:-2139px;"></div>
+            <div onclick="inputRoadInfo(this,46)" class="rightRoad" style="left:516px;top:-2179px;"></div>
+
+            <!-- 60 degree roads -->
+            <div onclick="inputRoadInfo(this,47)" class="leftRoad" style="left:316px;top:-2669px;"></div>
+            <div onclick="inputRoadInfo(this,48)" class="leftRoad" style="left:416px;top:-2709px;"></div>
+            <div onclick="inputRoadInfo(this,49)" class="leftRoad" style="left:516px;top:-2749px;"></div>
+
+            <div onclick="inputRoadInfo(this,50)" class="leftRoad" style="left:266px;top:-2699px;"></div>
+            <div onclick="inputRoadInfo(this,51)" class="leftRoad" style="left:366px;top:-2739px;"></div>
+            <div onclick="inputRoadInfo(this,52)" class="leftRoad" style="left:466px;top:-2779px;"></div>
+            <div onclick="inputRoadInfo(this,53)" class="leftRoad" style="left:566px;top:-2819px;"></div>
+            
+            <div onclick="inputRoadInfo(this,54)" class="leftRoad" style="left:216px;top:-2769px;"></div>
+            <div onclick="inputRoadInfo(this,55)" class="leftRoad" style="left:316px;top:-2809px;"></div>
+            <div onclick="inputRoadInfo(this,56)" class="leftRoad" style="left:416px;top:-2849px;"></div>
+            <div onclick="inputRoadInfo(this,57)" class="leftRoad" style="left:516px;top:-2889px;"></div>
+            <div onclick="inputRoadInfo(this,58)" class="leftRoad" style="left:616px;top:-2929px;"></div>
+
+            <div onclick="inputRoadInfo(this,59)" class="leftRoad" style="left:266px;top:-2879px;"></div>
+            <div onclick="inputRoadInfo(this,60)" class="leftRoad" style="left:366px;top:-2919px;"></div>
+            <div onclick="inputRoadInfo(this,61)" class="leftRoad" style="left:466px;top:-2959px;"></div>
+            <div onclick="inputRoadInfo(this,62)" class="leftRoad" style="left:566px;top:-2999px;"></div>
+            <div onclick="inputRoadInfo(this,63)" class="leftRoad" style="left:666px;top:-3039px;"></div>
+
+            <div onclick="inputRoadInfo(this,64)" class="leftRoad" style="left:316px;top:-2989px;"></div>
+            <div onclick="inputRoadInfo(this,65)" class="leftRoad" style="left:416px;top:-3029px;"></div>
+            <div onclick="inputRoadInfo(this,66)" class="leftRoad" style="left:516px;top:-3069px;"></div>
+            <div onclick="inputRoadInfo(this,67)" class="leftRoad" style="left:616px;top:-3109px;"></div>
+
+            <div onclick="inputRoadInfo(this,68)" class="leftRoad" style="left:366px;top:-3059px;"></div>
+            <div onclick="inputRoadInfo(this,69)" class="leftRoad" style="left:466px;top:-3099px;"></div>
+            <div onclick="inputRoadInfo(this,70)" class="leftRoad" style="left:566px;top:-3139px;"></div>
+        
+        <!-- SETTLEMENTS-->
+            <div id="v0" onclick="inputSettlementInfo(this, 0)" class="settlement" style="left:340px;top:-3625px;"></div>
+            <div id="v1" onclick="inputSettlementInfo(this,1)" class="settlement" style="left:440px;top:-3632px;"></div>
+            <div id="v2" onclick="inputSettlementInfo(this,2)" class="settlement" style="left:540px;top:-3639px;"></div>
+
+            <div id="v3" onclick="inputSettlementInfo(this,3)" class="settlement" style="left:290px;top:-3618px;"></div>
+            <div id="v4" onclick="inputSettlementInfo(this,4)" class="settlement" style="left:390px;top:-3625px;"></div>
+            <div id="v5" onclick="inputSettlementInfo(this,5)" class="settlement" style="left:490px;top:-3632px;"></div>
+            <div id="v6" onclick="inputSettlementInfo(this,6)" class="settlement" style="left:590px;top:-3639px;"></div>
+
+            <div id="v7" onclick="inputSettlementInfo(this,7)" class="settlement" style="left:290px;top:-3586px;"></div>
+            <div id="v8" onclick="inputSettlementInfo(this,8)" class="settlement" style="left:390px;top:-3593px;"></div>
+            <div id="v9" onclick="inputSettlementInfo(this,9)" class="settlement" style="left:490px;top:-3600px;"></div>
+            <div id="v10" onclick="inputSettlementInfo(this,10)" class="settlement" style="left:590px;top:-3607px;"></div>
+
+            <div id="v11" onclick="inputSettlementInfo(this,11)" class="settlement" style="left:240px;top:-3586px;"></div>
+            <div id="v12" onclick="inputSettlementInfo(this,12)" class="settlement" style="left:340px;top:-3593px;"></div>
+            <div id="v13" onclick="inputSettlementInfo(this,13)" class="settlement" style="left:440px;top:-3600px;"></div>
+            <div id="v14" onclick="inputSettlementInfo(this,14)" class="settlement" style="left:540px;top:-3607px;"></div>
+            <div id="v15" onclick="inputSettlementInfo(this,15)" class="settlement" style="left:640px;top:-3614px;"></div>
+
+            <div id="v16" onclick="inputSettlementInfo(this,16)" class="settlement" style="left:240px;top:-3559px;"></div>
+            <div id="v17" onclick="inputSettlementInfo(this,17)" class="settlement" style="left:340px;top:-3566px;"></div>
+            <div id="v18" onclick="inputSettlementInfo(this,18)" class="settlement" style="left:440px;top:-3573px;"></div>
+            <div id="v19" onclick="inputSettlementInfo(this,19)" class="settlement" style="left:540px;top:-3580px;"></div>
+            <div id="v20" onclick="inputSettlementInfo(this,20)" class="settlement" style="left:640px;top:-3587px;"></div>
+
+            <div id="v21" onclick="inputSettlementInfo(this,21)" class="settlement" style="left:190px;top:-3564px;"></div>
+            <div id="v22" onclick="inputSettlementInfo(this,22)" class="settlement" style="left:290px;top:-3571px;"></div>
+            <div id="v23" onclick="inputSettlementInfo(this,23)" class="settlement" style="left:390px;top:-3578px;"></div>
+            <div id="v24" onclick="inputSettlementInfo(this,24)" class="settlement" style="left:490px;top:-3585px;"></div>
+            <div id="v25" onclick="inputSettlementInfo(this,25)" class="settlement" style="left:590px;top:-3592px;"></div>
+            <div id="v26" onclick="inputSettlementInfo(this,26)" class="settlement" style="left:690px;top:-3599px;"></div>
+
+            <div id="v27" onclick="inputSettlementInfo(this,27)" class="settlement" style="left:190px;top:-3548px;"></div>
+            <div id="v28" onclick="inputSettlementInfo(this,28)" class="settlement" style="left:290px;top:-3555px;"></div>
+            <div id="v29" onclick="inputSettlementInfo(this,29)" class="settlement" style="left:390px;top:-3562px;"></div>
+            <div id="v30" onclick="inputSettlementInfo(this,30)" class="settlement" style="left:490px;top:-3569px;"></div>
+            <div id="v31" onclick="inputSettlementInfo(this,31)" class="settlement" style="left:590px;top:-3576px;"></div>
+            <div id="v32" onclick="inputSettlementInfo(this,32)" class="settlement" style="left:690px;top:-3583px;"></div>
+
+            <div id="v33" onclick="inputSettlementInfo(this,33)" class="settlement" style="left:240px;top:-3559px;"></div>
+            <div id="v34" onclick="inputSettlementInfo(this,34)" class="settlement" style="left:340px;top:-3566px;"></div>
+            <div id="v35" onclick="inputSettlementInfo(this,35)" class="settlement" style="left:440px;top:-3573px;"></div>
+            <div id="v36" onclick="inputSettlementInfo(this,36)" class="settlement" style="left:540px;top:-3580px;"></div>
+            <div id="v37" onclick="inputSettlementInfo(this,37)" class="settlement" style="left:640px;top:-3587px;"></div>
+
+            <div id="v38" onclick="inputSettlementInfo(this,38)" class="settlement" style="left:240px;top:-3535px;"></div>
+            <div id="v39" onclick="inputSettlementInfo(this,39)" class="settlement" style="left:340px;top:-3542px;"></div>
+            <div id="v40" onclick="inputSettlementInfo(this,40)" class="settlement" style="left:440px;top:-3549px;"></div>
+            <div id="v41" onclick="inputSettlementInfo(this,41)" class="settlement" style="left:540px;top:-3556px;"></div>
+            <div id="v42" onclick="inputSettlementInfo(this,42)" class="settlement" style="left:640px;top:-3563px;"></div>
+
+            <div id="v43" onclick="inputSettlementInfo(this,43)" class="settlement" style="left:290px;top:-3539px;"></div>
+            <div id="v44" onclick="inputSettlementInfo(this,44)" class="settlement" style="left:390px;top:-3546px;"></div>
+            <div id="v45" onclick="inputSettlementInfo(this,45)" class="settlement" style="left:490px;top:-3553px;"></div>
+            <div id="v46" onclick="inputSettlementInfo(this,46)" class="settlement" style="left:590px;top:-3560px;"></div>
+
+            <div id="v47" onclick="inputSettlementInfo(this,47)" class="settlement" style="left:290px;top:-3508px;"></div>
+            <div id="v48" onclick="inputSettlementInfo(this,48)" class="settlement" style="left:390px;top:-3515px;"></div>
+            <div id="v49" onclick="inputSettlementInfo(this,49)" class="settlement" style="left:490px;top:-3522px;"></div>
+            <div id="v50" onclick="inputSettlementInfo(this,50)" class="settlement" style="left:590px;top:-3529px;"></div>
+
+            <div id="v51" onclick="inputSettlementInfo(this,51)" class="settlement" style="left:340px;top:-3507px;"></div>
+            <div id="v52" onclick="inputSettlementInfo(this,52)" class="settlement" style="left:440px;top:-3514px;"></div>
+            <div id="v53" onclick="inputSettlementInfo(this,53)" class="settlement" style="left:540px;top:-3521px;"></div>
+
+            <!-- Road I forgot -->
+            <div onclick="inputRoadInfo(this)" class="rightRoad" style="left:216px;top:-3738px;"></div>
+
+            <!-- Buttons -->
+            <div onclick="submitBoard()" class="button" style="left:270px;top:-3500px;">Analyze Board</div>
+            <div onclick="loadBoard()" class="button" style="left:470px;top:-3560px;">Load Board</div>
+    </body>
+</html>
